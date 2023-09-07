@@ -6,6 +6,11 @@ terraform {
   }
 }
 
+/*
+ Use variable substitution for APIC Username/Password. Could
+ use signature-based authentication as well.
+*/
+
 provider "aci" {
   # ACI Username
   username = var.APIC_USERNAME
