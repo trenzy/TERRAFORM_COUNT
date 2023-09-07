@@ -1,8 +1,19 @@
+/* 
+  Using Count with these individual resources. We could use
+  separate tf files, but for the sake of this example, they are
+  in one file.
+*/
+
 resource "aci_tenant" "count_tenant" {
   count       = 4
   name        = "tenant_${count.index}"
   description = "Created with Terraform count"
 }
+
+/* 
+  In this resources (and the others), we use the same count
+   index so that it matches tenant0 with vrf0, epg0, etc.
+*/
 
 resource "aci_vrf" "count_vrf" {
   count       = 4
