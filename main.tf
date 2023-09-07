@@ -7,8 +7,8 @@ terraform {
 }
 
 /*
- Use variable substitution for APIC Username/Password. Could
- use signature-based authentication as well.
+ Use variable substitution for APIC Username/Password and APIC IP. 
+ Could use signature-based authentication as well.
 */
 
 provider "aci" {
